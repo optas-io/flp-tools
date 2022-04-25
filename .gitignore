@@ -1,4 +1,5 @@
 doc/html/
+upstream/doc/html
 
 build/
 compile_commands.json
