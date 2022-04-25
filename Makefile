@@ -5,8 +5,8 @@ build:
 	@cmake --build build
 	@cp build/compile_commands.json compile_commands.json
 
-test: build
-	@build/test/flptools_test
+test@%: build
+	@build/test/$*_test
 
 configure:
 	@cmake -S . -B build

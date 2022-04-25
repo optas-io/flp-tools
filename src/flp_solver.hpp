@@ -12,8 +12,10 @@ namespace flp {
 
 class FLPSolver: public operations_research::MPSolver {
  public:
-  FLPSolver(const std::string& name, OptimizationProblemType type)
-    : MPSolver(name, type) {}
+  FLPSolver(
+    const std::string& name,
+    OptimizationProblemType type = OptimizationProblemType::SCIP_MIXED_INTEGER_PROGRAMMING
+  ) : MPSolver(name, type) {}
 
   std::string message() const;
 };
