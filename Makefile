@@ -1,7 +1,7 @@
 .PHONY: build
 .PHONY: test
 
-build:
+build: configure
 	@cmake --build build
 	@cp build/compile_commands.json compile_commands.json
 
@@ -11,7 +11,10 @@ test: build
 test@%: build
 	@build/test/$*_test
 
-configure:
+configure: build/CMakeCache.txt
+	@#
+
+build/CMakeCache.txt:
 	@cmake -S . -B build
 
 clean:
