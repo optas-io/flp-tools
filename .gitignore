@@ -1,3 +1,5 @@
+doc/html/
+
 build/
 compile_commands.json
 
