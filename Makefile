@@ -5,6 +5,9 @@ build:
 	@cmake --build build
 	@cp build/compile_commands.json compile_commands.json
 
+test:
+	@cd build && ctest --build-and-test
+
 test@%: build
 	@build/test/$*_test
 
