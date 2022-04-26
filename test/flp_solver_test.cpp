@@ -5,7 +5,7 @@
 using optasio::flp::FLPSolver;
 
 
-TEST(FLPSolverInit, BasicTests) {
+TEST(FLPSolverTest, Constructor) {
   FLPSolver solver = FLPSolver("Test");
   EXPECT_EQ(solver.message(), "Hello, World!");
 }

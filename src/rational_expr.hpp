@@ -15,14 +15,27 @@ class RationalExpr {
   LinearExpr enumerator { 1 };
   LinearExpr denominator { 1 };
 
-  explicit RationalExpr(LinearExpr enumerator = 1, LinearExpr denominator = 1)
+  RationalExpr(LinearExpr enumerator = 1, LinearExpr denominator = 1)  // NOLINT : implicit conversion intentional
     : enumerator(enumerator), denominator(denominator)
   {}
 
   bool is_valid() const;
   bool is_linear() const;
+
+  RationalExpr& operator+=(double rhs);
+  RationalExpr& operator-=(double rhs);
+  RationalExpr& operator*=(double rhs);
+  RationalExpr& operator/=(double rhs);
+  RationalExpr operator-() const;
 };
 
+RationalExpr operator+(RationalExpr lhs, double rhs);
+RationalExpr operator+(double lhs, RationalExpr rhs);
+RationalExpr operator-(RationalExpr lhs, double rhs);
+RationalExpr operator-(double lhs, RationalExpr rhs);
+RationalExpr operator*(RationalExpr lhs, double rhs);
+RationalExpr operator*(double lhs, RationalExpr rhs);
+RationalExpr operator/(LinearExpr enumerator, LinearExpr denominator);
 
 }  //  namespace flp
 }  //  namespace optasio
