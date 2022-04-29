@@ -17,6 +17,9 @@ configure: build/CMakeCache.txt
 build/CMakeCache.txt:
 	@cmake -S . -B build
 
+image@%:
+	@docker-compose -f docker/$*/build.yml build
+
 clean:
 	@rm -rf build
 	@rm -f compile_commands.json

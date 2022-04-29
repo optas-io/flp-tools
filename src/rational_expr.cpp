@@ -46,38 +46,38 @@ RationalExpr RationalExpr::operator-() const {
 }
 
 RationalExpr operator+(RationalExpr lhs, double rhs) {
-  lhs += rhs;
-  return lhs;
+  return lhs += rhs;
 }
 
 RationalExpr operator+(double lhs, RationalExpr rhs) {
-  rhs += lhs;
-  return rhs;
+  return rhs += lhs;
 }
 
 RationalExpr operator-(RationalExpr lhs, double rhs) {
-  lhs -= rhs;
-  return lhs;
+  return lhs -= rhs;
 }
 
 RationalExpr operator-(double lhs, RationalExpr rhs) {
-  rhs -= lhs;
-  return rhs;
+  return rhs -= lhs;
 }
 
 RationalExpr operator*(RationalExpr lhs, double rhs) {
-  lhs *= rhs;
-  return lhs;
+  return lhs *= rhs;
 }
 
 RationalExpr operator*(double lhs, RationalExpr rhs) {
-  rhs *= lhs;
-  return rhs;
+  return rhs *= lhs;
 }
+
+}  //  namespace flp
+}  //  namespace optasio
+
+namespace operations_research {
+
+using optasio::flp::RationalExpr;
 
 RationalExpr operator/(LinearExpr enumerator, LinearExpr denominator) {
   return RationalExpr(enumerator, denominator);
 }
 
-}  //  namespace flp
-}  //  namespace optasio
+}

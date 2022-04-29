@@ -1,0 +1,7 @@
+version: "3.5"
+services:
+  flptools:
+    image: ${FLP_TOOLS_IMAGE_PREFIX:-}flp-tools:${FLP_TOOLS_IMAGE_TAG:-local}
+    build:
+      dockerfile: Dockerfile
+      context: .
