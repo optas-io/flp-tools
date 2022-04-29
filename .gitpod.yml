@@ -1,3 +1,1 @@
-image:
-  file: docker/dev/Dockerfile
-  context: .
+image: ghcr.io/optas-io/ortools:v9.3
