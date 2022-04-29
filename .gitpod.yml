@@ -9,6 +9,5 @@ vscode:
     - bbenoist.Doxygen
     - eamodio.gitlens
     - ms-azuretools.vscode-docker
-    - GitHub.vscode-pull-request-github
     - bierner.markdown-preview-github-styles
     - cschleiden.vscode-github-actions
