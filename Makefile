@@ -18,7 +18,7 @@ build/CMakeCache.txt:
 	@cmake -S . -B build
 
 image@%:
-	@docker-compose -f docker/$*/build.yml build
+	@docker-compose -f docker/$*/docker-compose.build.yml build
 
 clean:
 	@rm -rf build
