@@ -1,1 +1,14 @@
 image: ghcr.io/optas-io/ortools:v9.3
+vscode:
+  extensions:
+    - ms-vscode.cpptools-themes
+    - matepek.vscode-catch2-test-adapter
+    - twxs.cmake
+    - ms-vscode.cmake-tools
+    - cschlosser.doxdocgen
+    - bbenoist.Doxygen
+    - eamodio.gitlens
+    - ms-azuretools.vscode-docker
+    - GitHub.vscode-pull-request-github
+    - bierner.markdown-preview-github-styles
+    - cschleiden.vscode-github-actions
