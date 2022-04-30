@@ -20,6 +20,9 @@ build/CMakeCache.txt:
 image@%:
 	@docker-compose -f docker/$*/docker-compose.build.yml build
 
+docker-test:
+	@docker-compose -f docker/compose/test/docker-compose.yml up
+
 clean:
 	@rm -rf build
 	@rm -f compile_commands.json
