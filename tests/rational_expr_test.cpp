@@ -4,7 +4,9 @@
 #include "flp_solver.hpp"
 
 
-using namespace optasio::flp;
+using operations_research::LinearExpr;
+using optasio::flp::RationalExpr;
+using optasio::flp::FLPSolver;
 
 
 TEST(RationalExprTest, DefaultConstructor) {

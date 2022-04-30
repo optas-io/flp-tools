@@ -6,16 +6,24 @@ build: configure
 	@cp build/compile_commands.json compile_commands.json
 
 test: build
+	@echo " "
 	@cd build && ctest
 
 test@%: build
-	@build/test/$*_test
+	@echo " "
+	@build/tests/$*_test
 
 configure: build/CMakeCache.txt
 	@#
 
 build/CMakeCache.txt:
 	@cmake -S . -B build
+
+image@%:
+	@docker-compose -f docker/$*/docker-compose.build.yml build
+
+docker-test:
+	@docker-compose -f docker/compose/test/docker-compose.yml up
 
 clean:
 	@rm -rf build

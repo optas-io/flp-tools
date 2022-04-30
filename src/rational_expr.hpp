@@ -35,9 +35,17 @@ RationalExpr operator-(RationalExpr lhs, double rhs);
 RationalExpr operator-(double lhs, RationalExpr rhs);
 RationalExpr operator*(RationalExpr lhs, double rhs);
 RationalExpr operator*(double lhs, RationalExpr rhs);
-RationalExpr operator/(LinearExpr enumerator, LinearExpr denominator);
 
 }  //  namespace flp
 }  //  namespace optasio
+
+namespace operations_research {
+
+optasio::flp::RationalExpr operator/(
+    LinearExpr enumerator,
+    LinearExpr denominator
+);
+
+}  //  namespace operations_research
 
 #endif  //  SRC_RATIONAL_EXPR_HPP_

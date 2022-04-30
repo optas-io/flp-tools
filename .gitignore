@@ -1,5 +1,8 @@
+.cache/
+.vscode/
+
 doc/html/
-upstream/doc/html
+upstream/ortools-doc/html
 
 build/
 compile_commands.json

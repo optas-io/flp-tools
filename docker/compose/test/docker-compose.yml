@@ -1,0 +1,8 @@
+version: "3.5"
+services:
+  flp-tools-test:
+    image: ghcr.io/optas-io/ortools:v9.3
+    volumes:
+      - ../../..:/src
+    entrypoint: /src/docker/compose/test/entrypoint.sh
+

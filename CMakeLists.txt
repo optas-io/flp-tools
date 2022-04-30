@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.19.6)
+cmake_minimum_required(VERSION 3.18.4)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -29,5 +29,5 @@ option(BUILD_TESTS "Build the tests" ON)
 if (BUILD_TESTS)
   enable_testing()
   message("Building tests")
-  add_subdirectory(test)
+  add_subdirectory(tests)
 endif()
