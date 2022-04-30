@@ -1,7 +1,8 @@
 .cache/
 .vscode/
 
-doc/html/
+docs/dev/html/
+docs/user/html/
 upstream/ortools-doc/html
 
 build/
